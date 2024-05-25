@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="profile-main-page" id="profile-page-editall">
+        <div class="profilefor-selected">
+            <div class="tipofprofilebtn">
+                <i class="fa-solid fa-close" id="close-profile-page"></i>
+                <i class="fa-solid fa-pancil"></i>
+            </div>
+            <div class="profilefor-top">
+                <div class="profile-top-img">
+                    <img src="../checkmark-png-25977.png">
+                </div>
+                <div class="profile-top-text">
+                    <span>User Name</span>
+                </div>
+            </div>
+            <div class="profilefor-rest">
+                <div class="profile-userfild">
+                    <div class="profile-username">
+                        <!-- <div class="profile-username-first">
+                            <label for="user_name">
+                                First Name
+                            </label>
+                            <input type="text" class="user_name" value="First Name">
+                        </div>
+                        <div class="profile-username-last">
+                            <label for="user_name">
+                                Last Name
+                            </label>
+                            <input type="text" class="user_name" value="Lastname">
+                        </div> -->
+                        <div class="name-profile">
+                            <span>Name :</span>
+                            <span>This is my name</span>
+                        </div>
+                        <div class="name-profile">
+                            <span>Email :</span>
+                            <span>thisis123@gmail.com</span>
+                        </div>
+                        <div class="name-profile">
+                            <span>Phone :</span>
+                            <span>3636526555</span>
+                        </div>
+                        <div class="name-profile">
+                            <span>Gender :</span>
+                            <span>Male</span>
+                        </div>
+                        <div class="name-profile">
+                            <span>Age :</span>
+                            <span>19</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="search-for-list">
+        <div class="search-list" id="search-button-page-list">
+            <div class="search-list-input">
+                <input type="text">
+                <button type="button">Search</button>
+            </div>
+            <div class="search-list-rest">
+                <div class="search-history">
+                    <span>Search History</span>
+                </div>
+                <div class="search-tags">
+                    <span>Search Tags</span>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="add-task-button" id="add-task-containt">
+        <div class="containt-add-tast-list">
+            <input type="text" autofocus spellcheck required placeholder="Task Name" id="input-task-todo-list" >
+            <span>Description</span>
+            <div class="container-add-tast-tags">
+                <div class="container-tabs-tab">
+                    <div class="choose-date span-choose"id="choose-date-dk">
+                        <div class="choose-date-text">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <span id="dueDate">Due Date</span>
+                        </div>
+                        <div class="choose-date-down">
+                            <span id="if-selected-today">Today</span>
+                            <span id="if-selected-tomarrow">Tomarrow</span>
+                        </div>
+                    </div>
+                    <div class="chose-priority span-choose" id="priority-onclick">
+                        <i class="fa-regular fa-flag"></i>
+                        <span id="home-priority">Priority</span>    
+                    </div>
+                    <div class="priority-list-style" id="priority-list">
+                        <span id="top-priority"><i class="fa-regular fa-flag"></i> Top Priority</span>
+                        <span id="middle-priority"><i class="fa-regular fa-flag"></i> Middle Priority</span>
+                        <span id="low-priority"><i class="fa-regular fa-flag"></i> Low Priority</span>
+                    </div>
+
+                    <div class="choose-remainder span-choose">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Remainder</span>    
+                    </div>
+                    <div class="remainder-list-style">
+
+                    </div>
+                    <span><i class="fa-solid fa-ellipsis notthisone"></i></span>    
+                </div>
+                <div class="container-list-tag">
+                    <span>This is a tag</span>
+                </div>
+                
+            </div>
+            <hr/>
+            <div class="button-container-tag">
+                <div class="tag-tab">
+                    <i class="fa-solid fa-inbox"></i>
+                    <span>Input <i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <button type="submit" onclick="addTaskinLisn()">Add Tast</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="side-bar-menu">
+            <div class="toggle-button" id="tooggle-button-click">
+                <div class="button-toggle">
+                    <i class="fa-solid fa-list"></i>
+                    <!-- <span></span>
+                    <span></span>
+                    <span></span> -->
+                </div>
+                <div class="text-button-toggle">
+                    <span>Menu</span>
+                </div>
+            </div>
+            
+            <div class="side-menu-links" id="toggle-slider-onclick">
+                
+                <div class="side-baar-menu-pro">
+                    <div class="profile-manu">
+                        <div class="profile-img-pro">
+                            <img src="../checkmark-png-25977.png" alt="">
+                        </div>
+                        <span id="onclickopenid">Tony <i class="fa fa-angle-down" id="more-profile-icon"></i></span>
+                    </div>
+                    <div class="profile-menu-icons">
+                        <i class="fa-regular fa-bell"></i>
+                        <i class="fa-solid fa-table-columns" id="close-button-slider"></i>
+                    </div>
+                </div>
+
+                <div class="side-bar-manu-opt">
+                    <div class="add-link span-links-all" onclick="addTaskNew()" id="add-task"  >
+                        <i class="fa-solid fa-plus"></i>
+                        <span >Add Task</span>
+                    </div>
+                    <div class="search-links span-links-all" id="search-btn-list">
+                        <i class="fa-solid fa-search"></i>
+                        <span >Search</span>
+                    </div>
+                    <div class="inbox-link span-links-all">
+                        <i class="fa-solid fa-inbox"></i>
+                        <span>Inbox</span>
+                    </div>
+                    <div class="today-link span-links-all" id="today-onclick">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span >Today</span>
+                    </div>
+                    <div class="tomarrow-link span-links-all" id="tomarrow">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span >Tomarrow</span>
+                    </div>
+                    <div class="input-tag-link span-links-all">
+                        <i class="fa-solid fa-tags"></i>
+                        <span>Input & Tags</span>
+                    </div>
+
+                    <!-- <i class="fa-solid fa-hashtag"></i> -->
+
+                </div>
+
+                <div class="div-profile-tags-more">
+                    <div class="my-projects-links">
+                            <span>My Projects</span>
+                            <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="not-add-projects">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Add New Project</span>
+                    </div>
+
+                    <div class="all-projects-links">
+                        <ul class="all-projects-here">
+                            <span>
+                                <i class="fa-solid fa-hashtag"></i>
+                                <span>Fitness</span>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-hashtag"></i>
+                                <span>Sports</span>
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-hashtag"></i>
+                                <span>Nothing</span>
+                            </span>
+                        </ul>
+                    </div>
+
+                    <div class="all-team-links">
+                        <div class="my-team-title">
+                            <span >My Teams</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="not-add-teams">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Add New Team</span>
+                        </div>
+
+                        <div class="all-teams-links">
+                            <ul class="all-teams-here">
+                                <span>
+                                    <i class="fa-solid fa-hashtag"></i>
+                                    <span>New Brand</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-hashtag"></i>
+                                    <span>News</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-hashtag"></i>
+                                    <span>DSA</span>
+                                </span>
+                            
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- today page starts from here -->
+
+        <div class="main-container" id="cont-change">
+            <div class="containt-main-1">
+                <div class="top-project-main">
+                    <span class="title-today">
+                        Today
+                    </span>
+                    <div class="icon-top-main">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>View</span>
+                    </div>
+
+                    
+                </div>
+                <div class="my-project-title">
+                    My Projects
+                </div>
+
+
+                <span class="hr-line"></span>
+
+                <div class="project-main-contant">
+                    <ul id="all-projects">
+                        
+                    </ul>
+                </div>
+
+            </div>
+            <div class="containt-main-2">
+                <div class="calender">
+                    <span class="calender-title">
+                        Calender
+                    </span>
+                    <div class="wrapper">
+                        <header class="calender-header">
+                          <p class="current-date" id="current-date"></p>
+                          <div class="icons">
+                            <span id="prev" class="fa-solid fa-chevron-left"></span>
+                            <span id="next" class="fa-solid fa-chevron-right"></span>
+                          </div>
+                        </header>
+                        <div class="calendar">
+                          <ul class="weeks">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                          </ul>
+                          <ul class="days" id="days">
+                          </ul>
+                          
+                        </div>
+                    </div>
+                    <div class="popup-todo-list" id="pop-up-list">
+                        <div class="top-popup-list">
+                            <div class="date-pop-list">
+                                <span class="title-for-Year">2024</span>
+                                <!-- <span class="title-for-date">31</span> -->
+                                <!-- <span class="title-for-ofday">Wed</span>
+                                <span class="title-for-time">06:57</span> -->
+                            </div>
+                            <i class="fa-solid fa-close" id="closePopup-list"></i>
+                        </div>
+                        <div class="img-list-li">
+                            <img src="../checkmark-png-25975.png" alt="">
+                        </div>
+
+                        <div class="containt-list-open-popup">
+                            <div class="top-task-containt-list">
+                                <span>Top Task</span>
+                                <span>More</span>
+                            </div>
+                            <div class="text-todolist-popup">
+                                <div class="nepre">
+                                    <span onclick="plusDivs(-1)"><i class="fa-solid fa-chevron-left"></i></span>
+                                    <span onclick="plusDivs(1)"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <!-- <span id="prev-btn" onclick="plusDivs(-1)" class="fa-solid fa-chevron-left"></span>
+                                    <span id="next-btn" onclick="plusDivs(+1)" class="fa-solid fa-chevron-right"></span> -->
+                                </div>
+                                <ul class="span-popup-cal">
+                                    <li class="mySlides">
+                                        <span class="list-value-pri"><i class="fa-solid fa-calendar-day"></i> top</span>
+                                        <span class="list-value-value">dfsfdddddjdf</span>
+                                        <span class="list-value-null"><i class="fa-solid fa-clock"></i>remainder</span>
+                                    </li>
+                                    <li class="mySlides">
+                                        <span class="list-value-pri"><i class="fa-solid fa-calendar-day"></i> top</span>
+                                        <span class="list-value-value">dfsfjddddddddddddddf</span>
+                                        <span class="list-value-null"><i class="fa-solid fa-clock"></i>remainder</span>
+                                    </li>
+                                    <li class="mySlides">
+                                        <span class="list-value-pri"><i class="fa-solid fa-calendar-day"></i> top</span>
+                                        <span class="list-value-value">dfsfjddddddddddddddddf</span>
+                                        <span class="list-value-null"><i class="fa-solid fa-clock"></i>remainder</span>
+                                    </li>
+                                    <li class="mySlides">
+                                        <span class="list-value-pri"><i class="fa-solid fa-calendar-day"></i> top</span>
+                                        <span class="list-value-value">dfsfdddddddddddddjdf</span>
+                                        <span class="list-value-null"><i class="fa-solid fa-clock"></i>remainder</span>
+                                    </li>
+                                </ul>
+                                  
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="container-main-section">
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <!-- tomarrow page starts here -->
+        
+        <div class="main-container click-for-change " id="cont-change-tomarrow">
+            <div class="containt-main-1">
+                <div class="top-project-main">
+                    <span class="title-today">
+                        Tomarrow
+                    </span>
+                    <div class="icon-top-main">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>View</span>
+                    </div>
+
+                    
+                </div>
+                <div class="my-project-title">
+                    My Projects
+                </div>
+
+
+                <span class="hr-line"></span>
+
+                <div class="project-main-contant">
+                    <ul id="all-projects-tomarrow">
+                        
+                    </ul>
+                </div>
+
+            </div>
+            <div class="containt-main-2">
+                <div class="calender">
+                    <span class="calender-title">
+                       
+                    </span>
+                    <div class="wrapper">
+                       
+                    </div>
+                    <div class="popup-todo-list-tomarrow">
+                        
+                    </div>
+
+                </div>
+                <div class="container-main-section">
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
