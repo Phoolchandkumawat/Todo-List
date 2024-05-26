@@ -652,7 +652,7 @@ box-shadow: 0px 0px 5px 0px black;
 }
 
 
-.containt-add-tast-list input{
+.containt-add-tast-list input[type=text]{
   outline: none;
   border: none;
   background-color:#852dc0;
@@ -1335,4 +1335,53 @@ box-shadow: 0px 0px 5px 0px black;
 .priority-list-style span:hover{
   background-color: #852dc0;
   border-radius: 6px;
+}
+
+
+
+/* remainder code  */
+.remainder-list-style {
+  display: none;
+  position: relative;
+  
+}
+
+.remainder-list-style-active{
+display: grid;
+}
+
+.remainder-list-container {
+  position: absolute;
+  top: 20px;
+  left: -150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #8400ff;
+	border: 1px solid #8400ff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.remainder-list-container input{
+  background-color: #852dc0;
+  padding: 2px;
+  border-radius: 22px;
+  color: white;
+  border: 1px solid #8400ff;
+  
+}
+
+.remainder-list-container button{
+  background-color: #ff0000;
+  padding: 2px;
+  border-radius: 22px;
+  color: white;
+  outline: none;
+  border: 1px solid #8400ff;
+  cursor: pointer;
 }
