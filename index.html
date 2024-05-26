@@ -17,7 +17,7 @@
             </div>
             <div class="profilefor-top">
                 <div class="profile-top-img">
-                    <img src="checkmark-png-25977.png">
+                    <img src="../checkmark-png-25977.png">
                 </div>
                 <div class="profile-top-text">
                     <span>User Name</span>
@@ -90,7 +90,7 @@
 
     <div class="add-task-button" id="add-task-containt">
         <div class="containt-add-tast-list">
-            <input type="text" autofocus spellcheck required placeholder="Task Name" id="input-task-todo-list" >
+            <input type="text" autofocus spellcheck required placeholder="Task Name" id="input-task-todo-list" value="">
             <span>Description</span>
             <div class="container-add-tast-tags">
                 <div class="container-tabs-tab">
@@ -114,12 +114,16 @@
                         <span id="low-priority"><i class="fa-regular fa-flag"></i> Low Priority</span>
                     </div>
 
-                    <div class="choose-remainder span-choose">
+                    <div class="choose-remainder span-choose" id="onclick-remainder">
                         <i class="fa-regular fa-clock"></i>
-                        <span>Remainder</span>    
+                        <span >Remainder</span>    
                     </div>
-                    <div class="remainder-list-style">
-
+                    <div class="remainder-list-style" id="page-remainder">
+                        <div class="remainder-list-container" >
+                            <!-- <input type="text" id="todo-input" placeholder="Add a todo item..."> -->
+                            <input type="time" id="remainder-time-picker" value="00:00">
+                            <button type="text" id="add-todo-button">Set Remainder</button>
+                        </div>
                     </div>
                     <span><i class="fa-solid fa-ellipsis notthisone"></i></span>    
                 </div>
@@ -159,7 +163,7 @@
                 <div class="side-baar-menu-pro">
                     <div class="profile-manu">
                         <div class="profile-img-pro">
-                            <img src="checkmark-png-25977.png" alt="">
+                            <img src="../checkmark-png-25977.png" alt="">
                         </div>
                         <span id="onclickopenid">Tony <i class="fa fa-angle-down" id="more-profile-icon"></i></span>
                     </div>
