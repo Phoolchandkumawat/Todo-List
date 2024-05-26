@@ -114,25 +114,6 @@ daysTags.addEventListener("click", (event) => {
         console.log("Tomarrow")
     }
 
-    // Show the pop-up with the selected day's date
-    // popup.classList.add("active-list");
-    // popupContent.innerText = `Selected date: ${day} ${month} ${year}`;
-    // console.log(contentForPopDates)
-
-    // Close the pop-up when the user clicks outside the pop-up or on the close button
-    // document.addEventListener("click", (event) => {
-    //   if (event.target!== popup && event.target!== closePopup) {
-    //     popup.classList.remove("active");
-    //     console.log('fdld')
-    //   }
-    // });
-
-
-    // document.addEventListener("click", (event) => {
-    //     if (!popup.contains(event.target) && event.target!== closePopup) {
-    //       popup.classList.remove("active-list");
-    //     }
-    //   });
 
     // Add a delay before showing the popup
     setTimeout(() => {
@@ -188,10 +169,6 @@ icon.addEventListener("click", () => { // adding click event on both icons
 
 // function popupLIstImpo(){
 
-// const thisisalogo=document.getElementById('todolist-text-input-list');
-// const thisIsPop=document.querySelector('.popup-todo-list');
-// thisisalogo.innerHTML ="this is demo";
-// thisIsPop.style.display="none";
 
 // }
 
@@ -210,23 +187,6 @@ icon.addEventListener("click", () => { // adding click event on both icons
 
 
 
-// function getDatesOfMonth() {
-//     var currentDate = new Date();
-//     var year = currentDate.getFullYear();
-//     var month = currentDate.getMonth();
-//     var daysInMonth = new Date(year, month + 1, 0).getDate();
-
-//     var dates = [];
-//     for (var day = 1; day <= daysInMonth; day++) {
-//       var date = new Date(year, month, day);
-//       dates.push(date.toDateString());
-//     }
-
-//     return dates;
-//   }
-
-//   var datesOfMonth = getDatesOfMonth();
-//   console.log(datesOfMonth);
 
 
 /* When the user clicks on the button, 
@@ -246,15 +206,7 @@ const addTaskNewList = document.getElementById('add-task-containt');
 // Close the dropdown if the user clicks outside of it
 const newlineLinkTask = document.querySelector('.main')
 
-// newlineLinkTask.onclick = function(e) {
-// if (!e.target.matches('#add-task')) {
-// var myDropdown = document.getElementById("add-task-containt");
-//     if (addTaskNewList.style.display=="grid") {
-//     addTaskNewList.style.display='none';
-    
-//     }
-// }
-// }
+
 
 const fjdfdcdkc = document.getElementById('add-task-containt')
 
@@ -390,9 +342,12 @@ function justNever(){
 }
 
 const listInput = document.getElementById('input-task-todo-list');
+const listInputMost = document.getElementById('input-task-todo-list');
+console.log(listInputMost.value)
 function addTaskinLisn(){
 const tomarrowClick = document.getElementById('cont-change-tomarrow');
 const tomarrowLIst = document.getElementById('all-projects-tomarrow');
+const timePickerddddd = document.querySelector('#remainder-time-picker');
 if(dueDate.innerText=="Today"){
     console.log("Clicked on today")
     console.log(listInput.value);
@@ -405,7 +360,7 @@ if(dueDate.innerText=="Today"){
     </div>
     <span> 
     <i class="fa-solid fa-bell"></i>
-        <span class="time-list">00:00 Am 
+        <span class="time-list">${timePickerddddd.value} 
         </span> 
         <span class="tags-list"># fitnewss</span>
     </span>`;
@@ -423,8 +378,8 @@ justNever()
     <i class ="fa-solid fa-close"></i>
     </div>
     <span> 
-        <span class="time-list">00:00 Am 
-            <i class="fa-solid fa-bell"></i>
+        <span class="time-list"> 
+            <i class="fa-solid fa-bell"></i>${timePickerddddd.value}
         </span> 
         <span class="tags-list"># fitnewss</span>
     </span>`;
@@ -436,7 +391,7 @@ justNever()
 addTaskNewList.style.display='none';
 // console.log(li.innerHTML)
 
-
+document.querySelector('#remainder-time-picker').value = '12:00'
 
 
 }
@@ -641,164 +596,82 @@ closeProfliePage.addEventListener('click', function (){
 })
 
 
-// onclickprofileOpen.addEventListener('click', function (){
-//     profileEditPage.style.display="flex";
-//     if(profileEditPage.style.display="flex"){
-//         document.addEventListener("click", (event) => {
-//             if (!profileEditPage.contains(event.target)) {
-//             //   popup.classList.remove("active-list");
-//             // addTaskNewList.style.display="none"
-//             profileEditPage.style.display="none";
-//             console.log("covv")
-//             }
 
-//     }
-// }
-// })
 
 
 
-
-
-
-
-// button code for the callenger
-
-// const nexFre = document.getElementById('prev-btn')
-// const nexFrenext = document.getElementById('next-btn')
-
-
-
-// function nexfpre(){
-//     let newlse = document.querySelectorAll('.span-popup-cal li');
-//     console.log(newlse.length);
-// nexFre.onclick= function (){
-//     for (let i = 0; i<= newlse.length; i++){
-//         const newlse = document.querySelectorAll('.span-popup-cal li');
-//         console.log('dfjf')
-//         console.log(i)
-    
-//     }
-// }
-        
-// }
-
-// nexfpre()
-// const slider = document.querySelectorAll('.text-todolist-popup.span-popup-cal');
-// const prevBtn = document.querySelectorAll('#prev-btn');
-// const nextBtn = document.querySelectorAll('#next-btn');
-
-// prevBtn.forEach((btn, index) => {
-//   btn.addEventListener('click', () => {
-//     slider[index].scrollLeft -= slider[index].offsetWidth;
-//   });
-// });
-
-// nextBtn.forEach((btn, index) => {
-//   btn.addEventListener('click', () => {
-//     slider[index].scrollLeft += slider[index].offsetWidth;
-//   });
-// });
-
-
-
-
-
-
-
-
-
-
-
-// tomarrow code change
-
-// const tomarrowClick = document.getElementById('cont-change-tomarrow');
-// const tomarrowLIst = document.getElementById('all-projects-tomarrow');
-
-
-// function tomarrowAddTast(){
-//     if(dueDate.innerText=="Today"){
-//         console.log("Clicked on today")
-    
-
-//     } else if (dueDate.innerText =="Tomarrow") {
-//         console.log("click on the Tomarrow")
-//         let li  = document.createElement('li');
-//         console.log(tomarrowListInput.value)
-//         li.innerHTML=`<span id="day-input"><i class="fa-solid fa-clock"></i> Tomarrow</span>
-//         <h3>${listInput.value}</h3>
-//         <span> 
-//             <span class="time-list">09:00 Am 
-//                 <i class="fa-solid fa-bell"></i>
-//             </span> 
-//             <span class="tags-list"># fitnewss</span>
-//         </span>`;
-//         console.log(listInput.value)
-//         tomarrowLIst.appendChild(li);
-//     }
-// }
-
-
-
-// tomarrowAddTast()
-
-
-
-
-
-// Get the user input for the selected date
-// const selectedDate = parseInt(prompt("Enter the date (1-31):"));
-
-// Get the current day
-// const currentDateDate = new Date().getDate();
-
-// // Calculate the difference in days
-// let daysDiff;
-// if (selectedDate >= currentDateDate) {
-//     daysDiff = selectedDate - currentDateDate;
-// } else {
-//     daysDiff = 31 - currentDateDate + selectedDate;
-// }
-
-// // Update the date based on the difference
-// const newDate = new Date();
-// newDate.setDate(newDate.getDate() + daysDiff);
-
-// console.log("Selected Date:", selectedDate);
-// console.log("Updated Date:", newDate.toISOString().slice(0, 10));
-
-
-
-
-
-
-
-
-
-
-
-// tomarrow on click containt change cods 
-
-
-// const tomarrow = document.getElementById('tomarrow');
-// tomarrow.onclick = function (){
-//     // console.log("this is")
-//     constentChange.innerHTML= "thisdddd"
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// constom not to be used for this project only for the practice porpuse
+// remiande code 
+
+const onclickRemainder = document.getElementById('onclick-remainder')
+const onclickRemainderPage = document.getElementById('page-remainder')
+
+onclickRemainder.addEventListener('click', function(){
+    // onclickRemainderPage.style.display='grid';
+    onclickRemainderPage.classList.toggle('remainder-list-style-active')
+})
+
+
+
+// Generate a unique ID
+const generateId = () => {
+    // Implementation for generating a unique ID
+  };
+  
+  // Save the updated todo item object to your data store
+  const saveTodoItem = (todoItem) => {
+    // Implementation for saving the todo item object
+  };
+  
+  // Get the time picker and add an event listener to it
+  const timePicker = document.querySelector('#remainder-time-picker');
+  timePicker.addEventListener('input', (e) => {
+    const selectedTime = e.target.value;
+    const formattedTime = selectedTime.split(':').map((t) => t.padStart(2, '0')).join(':');
+  
+    const todoItem = {
+      id: generateId(),
+      text: 'Buy groceries',
+      completed: false,
+      remainder: formattedTime
+    };
+  
+    saveTodoItem(todoItem);
+  
+    console.log(`Remainder time changed to ${formattedTime}`);
+  });
+  
+  // Get the add todo button and add an event listener to it
+const addTodoButton = document.querySelector('#add-todo-button');
+addTodoButton.addEventListener('click', () => {
+    // const todoText = document.querySelector('#todo-input').value;
+    const remainderTime = document.querySelector('#remainder-time-picker').value;
+  
+    const formattedTime = remainderTime.split(':').map((t) => t.padStart(2, '0')).join(':');
+  
+    const todoItem = {
+      id: generateId(),
+      // text: todoText,
+      completed: false,
+      remainder: formattedTime
+    };
+  
+    saveTodoItem(todoItem);
+  
+    // document.querySelector('#todo-input').value = '';
+    // document.querySelector('#remainder-time-picker').value = '12:00';
+  
+    const ddde = formattedTime;
+    // arrrrrr.push(ddde);
+    // console.log(`Todo item added with text "${todoText}" and remainder time ${formattedTime}`);
+    console.log(ddde);
+    onclickRemainderPage.classList.remove('remainder-list-style-active')
+    // console.log(arrrrrr)
+    // thisiis = ddde
+    // console.log(thisiis);
+
+});
+  
+  
+  
+
+  
